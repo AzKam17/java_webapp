@@ -16,25 +16,26 @@
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     </h:head>
 
-    <h:body styleClass="login-body">
+    <h:body styleClass="login-body" style="background: #f8f9fa;">
         <div class="login-wrapper">
-            <div class="login-panel">
+            <div class="login-panel" style="border: 1px solid #ccc; margin-top: 80px; margin-bottom: 80px; background: white;" >
                 <h:link outcome="/dashboard" styleClass="logo">
                     <p:graphicImage name="images/cepici.png" library="freya-layout" ></p:graphicImage>
                 </h:link>
                 <p style="margin-top: 0px !important;">
                     Bienvenue sur la plateforme de gestion des documents
                 </p>
-                <p:inputText id="email" placeholder="Login" />
-                <p:password id="password" placeholder="Mot de passe" />
+                <p:inputText id="email" placeholder="Login" style="max-width: 100%; width: 100% !important;"/>
+                <p:password id="password" placeholder="Mot de passe" style="max-width: 100%; width: 100% !important;"/>
                 <a href="/freya/dashboard.xhtml">
-                <p:commandButton value="Connexion" type="button" />
+                    <p:commandButton value="Connexion" icon="ui-icon-user" style="max-width: 100%; width: 100% !important;"/>
                 </a>
                 <a href="#">
                     Mot de pass oublié
                 </a>
             </div>
         </div>
+
         <h:outputStylesheet name="css/#{guestPreferences.layout}.css" library="freya-layout" />
     </h:body>
 
